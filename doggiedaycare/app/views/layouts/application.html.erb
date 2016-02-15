@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to fa_icon("home", text: "Home"), root_path %>
+<%= link_to fa_icon("info", text: "About"), about_path %>
 
 <%= yield %>
 
