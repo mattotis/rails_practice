@@ -1,6 +1,6 @@
 <h1>My Dogs</h1>
 
-<table border='1px solid black'>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>ID</th>
@@ -28,5 +28,5 @@
 </table>
 
 <body>
-<p><%= link_to "Add your dog!", new_dog_path %></p>
+<p><%= link_to "Add your dog!", new_dog_path, class: 'btn btn-default' %></p>
   </body>

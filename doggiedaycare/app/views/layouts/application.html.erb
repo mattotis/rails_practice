@@ -7,12 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div class="container">
 <%= link_to fa_icon("home", text: "Home"), root_path %>
 <%= link_to fa_icon("info", text: "About"), about_path %>
 <%= link_to "Dogs", dogs_path %>
 
-<p id="notice"><%= notice %></p>
+<% if alert.present? %>
+<div class="alert alert-success" role="alert">
+  <%= alert %>
+</div>
+<% end %>
 <%= yield %>
+</div>
 
 </body>
 </html>

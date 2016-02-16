@@ -14,7 +14,7 @@ class DogsController < ApplicationController
   def create
     @dog = Dog.new(dog_params)
     if @dog.save
-      redirect_to dogs_url, notice: "Dog saved!"
+      redirect_to dogs_url, alert: "Dog saved!"
     else
       flash.now[:notice] = "Couldn't save dog :["
       render :new
@@ -28,7 +28,7 @@ class DogsController < ApplicationController
   def update
     @dog = Dog.find(params[:id])
     if @dog.update(dog_params)
-      flash[:notice] = 'Dog updated!'
+      flash[:alert] = 'Dog updated!'
         redirect_to @dog
     else
         flash.now[:notice] = "Could not update your dog."
@@ -39,7 +39,7 @@ class DogsController < ApplicationController
   def destroy
     @dog = Dog.find(params[:id])
     if @dog.destroy
-      redirect_to dogs_url, notice: "Successfully deleted!"
+      redirect_to dogs_url, alert: "Successfully deleted!"
     else
       redirect_to dogs_url, notice: "Could not delete dog."
     end
