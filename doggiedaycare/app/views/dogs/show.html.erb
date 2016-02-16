@@ -9,3 +9,15 @@
 <p>
 <strong>Age:</strong> <%= @dog.age %>
 </p>
+
+<p>
+<strong>Owner:</strong> <%= @dog.owner %>
+</p>
+
+<p>
+<%= link_to "Edit", edit_dog_path %>
+</p>
+
+<p>
+<%= link_to "Delete", @dog.destroy %>
+</p>

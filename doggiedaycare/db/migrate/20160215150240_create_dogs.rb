@@ -4,7 +4,7 @@ class CreateDogs < ActiveRecord::Migration
       t.string :name
       t.string :breed
       t.integer :age
-
+      t.string :owner
       t.timestamps null: false
     end
   end
