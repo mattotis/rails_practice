@@ -13,8 +13,8 @@
   <%= dog_fields.number_field :age, class: "form-control", placeholder: '5' %><br>
 </div>
 <div class='form-group'>
-  <%= dog_fields.label :owner %>
-  <%= dog_fields.text_field :owner, class: "form-control", placeholder: 'John' %><br>
+  <%= dog_fields.label :owner_id %>
+  <%= dog_fields.collection_select :owner_id, Owner.all, :id, :name, {prompt: "Select an owner"}, {class: "form-control"} %><br>
 </div>
 
   <%= dog_fields.submit class: 'btn btn-primary btn-block' %>
