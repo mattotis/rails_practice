@@ -19,5 +19,5 @@
 </p>
 
 <p>
-<%= link_to "Delete", @dog.destroy %>
+<%= link_to "Delete", @dog, method: :delete, data: {confirm: "Are you sure?"} %>
 </p>
